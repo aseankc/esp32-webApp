@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CPanel Page</title>
+    <!-- Preload javascript and bootstrap dependencies -->
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <script src="JSLib/jquery-3.5.1.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="JSLib/angular1.8.min.js"></script>
+    <script src="JSLib/angular-route.min.js"></script>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <!-- Load custom script files for app control from appJS -->
+
+
+</head>
+<body ng-app="app">
+
+<a href="/"><button class="btn btn-primary">Homepage</button></a>
+<a href="/about"><button class="btn btn-info">About</button></a>
+<a href="/date"><button class="btn">Date</button></a>
+<a href="/login"><button class="btn">Login</button></a>
+<div >
+    <div ng-view>
+        <!-- View goes here -->
+    </div>
+</div>
+
+</body>
+</html>
