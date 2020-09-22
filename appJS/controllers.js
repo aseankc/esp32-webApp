@@ -31,9 +31,3 @@ app.controller('LoginController',['$scope','$location','AuthService',function($s
 app.controller('CPanel',['$scope', function($scope) {
     $scope.user="user";
 }]);
-app.js
-controller.js
-indexedDB.html
-about.html
-schedule.html / date.html
-login.html
