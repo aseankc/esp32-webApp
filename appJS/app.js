@@ -4,7 +4,7 @@ app.config(function($routeProvider){
     $routeProvider
 
         //default page
-        .when('/',{
+        .when('/home',{
            templateUrl : 'pages/homepage.html',
            controller  : 'Homepage'
         })
@@ -22,14 +22,21 @@ app.config(function($routeProvider){
         })
 
          //login page
-         .when('/about',{
+         .when('/login',{
             templateUrl : 'pages/login.html',
             controller  : 'About'
         })
 
-        //date page
+         //signup page
+         .when('/signUp',{
+            templateUrl : 'pages/signup.html',
+            controller  : 'SignUp'
+        })
+
+        //schedule page
         .when('/schedule',{
            templateUrl : 'pages/schedule.html',
            controller  : 'Schedule'
         });
+        
 });

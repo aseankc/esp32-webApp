@@ -9,22 +9,25 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="JS/angular1.8.min.js"></script>
     <script src="JS/angular-route.min.js"></script>
-    <script>document.write('<base href="' + document.location + '" />');</script>
+    <!-- <script>document.write('<base href="' + document.location + '" />');</script> -->
     <!-- Load custom script files for app control from appJS -->
-
+    <script src="appJS/app.js"></script>
+    <script src="appJS/services.js"></script>
+    <script src="appJS/controllers.js"> </script>
+   
 
 </head>
 <body ng-app="main-app">
-
-<a href="/pages/homepage.html"><button class="btn btn-primary">Homepage</button></a>
-<a href="/pages/about.html"><button class="btn btn-info">About</button></a>
-<a href="/pages/date.html"><button class="btn">Date</button></a>
-<a href="/pages/login.html"><button class="btn">Login</button></a>
+ <!-- <div id="nav-header" ng-include="'pages/header.html'"></div> -->
+<a href="#!home"><button class="btn btn-primary">Homepage</button></a>
+<a href="#!about"><button class="btn btn-info">About</button></a>
+<a href="#!schedule"><button class="btn">Date</button></a>
+<a href="#!login"><button class="btn">Login</button></a>
 <div >
     <div ng-view>
         <!-- View goes here -->
     </div>
 </div>
-
+<!-- <div id="footerdiv" ng-include="'pages/footer.html'"></div> -->
 </body>
 </html>

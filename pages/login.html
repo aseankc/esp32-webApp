@@ -1,8 +1,8 @@
 <!-- login.html -->
-<div class="col-md-12">
+<div class="col-md-12 form-group">
       <p><strong>Login Page</strong></p>
       
-      <form ng-submit="formSubmit()" ng-controller="LoginController" class="form">
+      <form ng-submit="checkUser()" ng-controller="LoginController" class="form">
         <div class="col-md-4">
           <div class="form-group">
             <input type="text" class="form-control" ng-model="username" placeholder="username" required=""/>
@@ -14,7 +14,8 @@
 
           <div class="form-group">
             <button type="submit" class="btn btn-success">Login</button>
-            <span class="text-danger" style="color:red">{{ error }}</span>
+            <button type="button" class="btn btn-success" ng-click="signUp()">SignUp</button>
+            <span class="text-danger" style="color:red">{{ msg }}</span>
           </div>
 
         </div>
