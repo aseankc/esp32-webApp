@@ -9,9 +9,7 @@ app.controller('About',['$scope', function($scope){
 app.controller('Schedule',['$scope', function($scope) {
     $scope.now = new Date();
 }]);
-app.controller('SignUp',['$scope',function($scope){
-    $scope.newUser="Elabtronics";
-}]);
+
 
 app.controller('LoginController',['$scope','$location','AuthService',function($scope,$location,AuthService){
     $scope.msg=" ";
@@ -30,4 +28,38 @@ app.controller('LoginController',['$scope','$location','AuthService',function($s
 
 app.controller('CPanel',['$scope', function($scope) {
     $scope.user="user";
+}]);
+
+app.controller('SignUp',['$scope',function($scope){
+    $scope.newUser="Elabtronics";
+    $scope.currentStep=1;
+    $scope.user={};
+    $scope.steps={
+       1: {
+        step: 1,
+        name: "First step",
+        template: "../pages/wizards/start.html"
+      },
+      2:{
+        step: 2,
+        name: "Second step",
+        template: "../pages/wizards/second.html"
+      },   
+      3:{
+        step: 3,
+        name: "Third step",
+        template: "../pages/wizards/final.html"
+      }
+    };
+
+      $scope.gotoStep=function(step){
+        $scope.currentStep=step;
+      }
+      $scope.getTemplate=function(){
+        return $scope.steps[$scope.currentStep].template;
+      }
+      $scope.save=function(){
+
+      }
+
 }]);
