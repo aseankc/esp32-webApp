@@ -30,7 +30,7 @@ app.controller('CPanel',['$scope', function($scope) {
     $scope.user="user";
 }]);
 
-app.controller('SignUp',['$scope',function($scope){
+app.controller('SignUp',['$scope',$templateCache,function($scope,$templateCache){
     $scope.newUser="Elabtronics";
     $scope.currentStep=1;
     $scope.user={};
@@ -62,4 +62,7 @@ app.controller('SignUp',['$scope',function($scope){
 
       }
 
+      $scope.clearCache = function() { 
+        $templateCache.removeAll();
+      }
 }]);
